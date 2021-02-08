@@ -7,6 +7,7 @@ import sys
 # other imports  (standard library, standard non-library, local)
 
 # constants (AKA global variables -- keep these to a minimum)
+MAX_TRIES = 5
 
 # main function
 def main(args):
@@ -18,6 +19,13 @@ def main(args):
     """
     function1()
 
+def spam():
+    """
+    This is a silly function
+    """
+    print("Hello from spam()")
+
+
 # other functions
 def function1():
     """
@@ -27,5 +35,5 @@ def function1():
     """
     pass
 
-if __name__ == '__main__':
+if __name__ == '__main__':  # if script, not module
     main(sys.argv[1:])  # Pass command line args (minus script name) to main()
