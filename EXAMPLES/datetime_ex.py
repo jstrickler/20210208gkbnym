@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+#    module          class     class  class
 from datetime import datetime, date, timedelta
 
 print("date.today():", date.today())  # <1>
@@ -12,8 +13,9 @@ print("now.hour:", now.hour)
 print("now.minute:", now.minute)
 print("now.second:", now.second)
 
-d1 = datetime(2018, 6, 13)  # <4>
-d2 = datetime(2018, 8, 24)
+
+d1 = datetime(2018, 6, 13, 11, 15, 15)  # <4>
+d2 = datetime(2018, 8, 24, 17, 58, 2)
 
 d3 = d2 - d1  # <5>
 
@@ -36,3 +38,9 @@ t3 = t2 - t1
 print("datetime(2016, 8, 24, 10, 4, 34):", t1)
 print("datetime(2018, 8, 24, 22, 8, 1):", t2)
 print("time diff (t2 - t1):", t3)
+james_bd = date(2014, 8, 1)  # James's BD
+today = date.today()
+elapsed = today - james_bd
+
+age = elapsed.days / 365
+print("James is {} years old".format(round(age, 1)))

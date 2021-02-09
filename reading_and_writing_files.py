@@ -1,6 +1,6 @@
 
 with open('DATA/mary.txt') as mary_in:
-    for raw_line in mary_in:
+    for raw_line in mary_in:  # raw_line = mary_in.readline()
         line = raw_line.rstrip()
         print(line)
 print('-' * 60)

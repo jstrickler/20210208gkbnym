@@ -8,6 +8,8 @@ date_strings = [  # <1>
     'Apr 1, 2015',
     'Apr 1 2015',
     '04/01/2015',
+    'Feb 8 2021',
+    'Feb 29, 2021',
     '1 Apr 2015',
     'April 1st, 2015',
     'April 1, 2015 8:09',
@@ -19,6 +21,6 @@ date_strings = [  # <1>
 for date_string in date_strings:
     try:
         dt = parser.parse(date_string)  # <2>
-        print(dt)
+        print("{:25s} {}".format(date_string, dt))
     except ValueError as err:
         print("Can't parse", date_string)
