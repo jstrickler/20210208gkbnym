@@ -21,7 +21,7 @@ if sys.version_info.major == 3 and sys.version_info.minor >= 6:
     city = 'Orlando'
     temp = 85
 
-    print(f"It is {temp} in {city}")  # <6>
+    print(f"It is {temp}\u00B0 in {city}")  # <6>
 
 else:
     print("Sorry -- f-strings are only supported by Python 3.6+")

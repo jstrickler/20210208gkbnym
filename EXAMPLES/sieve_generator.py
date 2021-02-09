@@ -9,8 +9,9 @@ def next_prime(limit):
         for j in range(2 * i, limit + 1, i):
             flags.add(j)  # <2>
         yield i  # <3>
-
+    # returns generator!
 
 np = next_prime(200)  # <4>
+print(np)
 for prime in np:  # <5>
     print(prime, end=' ')
