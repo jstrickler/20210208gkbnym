@@ -42,7 +42,7 @@ print(d1, d2, j1)
 # print(str(d1), sep, str(d2), sep, str(j1), end)
 print(len(d1), len(d2), len(j1))
 
-
+print("\U0001F92F")
 
 
 
