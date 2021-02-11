@@ -1,6 +1,16 @@
+"""
+Provide CardDeck class
+"""
+
 import random
 
 class CardDeck:
+    """
+    Provide a deck of playing cards
+
+    Synopsis:
+    d = CardDeck("Dealer Name")
+    """
     SUITS = 'Clubs Diamonds Hearts Spades'.split()
     RANKS = '2 3 4 5 6 7 8 9 10 J Q K A'.split()
 
@@ -16,9 +26,19 @@ class CardDeck:
                 self._cards.append(card)
 
     def shuffle(self):
+        """
+        Shuffle the cards
+
+        :return: None
+        """
         random.shuffle(self._cards)
 
     def draw(self):
+        """
+        Draw one card
+
+        :return: card as tuple
+        """
         return self._cards.pop()
 
     def get_cards(self):  #getter method BAD (or so)
@@ -39,9 +59,13 @@ class CardDeck:
         else:
             raise TypeError("Dealer must be a string")
 
+    # dealer = property(dealer_getter, dealer_setter, None, "this is the doc string")
+
     @classmethod
     def get_ranks(cls):
         return cls.RANKS
+
+    # get_ranks = classmethod(get_ranks)
 
     def __len__(self):  # responds to global function len()
         return len(self._cards)

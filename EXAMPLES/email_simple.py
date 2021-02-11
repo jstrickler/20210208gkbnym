@@ -20,6 +20,7 @@ SMTP_USER = 'pythonclass'
 SMTP_PASSWORD = getpass("Enter SMTP server password:")  # <5>
 
 smtpserver = smtplib.SMTP("smtp2go.com", 2525)  # <6>
+smtpserver.starttls()  # encrypt
 smtpserver.login(SMTP_USER, SMTP_PASSWORD)  # <7>
 
 msg = EmailMessage()  # <8>

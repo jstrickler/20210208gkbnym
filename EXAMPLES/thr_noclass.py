@@ -6,6 +6,7 @@ import time
 
 
 def doit(num):  # <1>
+    # do the work of the thread
     time.sleep(random.randint(1, 3))
     print("Hello from thread {}".format(num))
 

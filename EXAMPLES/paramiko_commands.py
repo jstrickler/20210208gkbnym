@@ -1,12 +1,12 @@
 #!/usr/bin/env python
-
 import paramiko
 
+# ssh = paramiko.SSHClient()
 with paramiko.SSHClient() as ssh:  # <1>
 
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())  # <2>
 
-    ssh.connect('localhost', username='python', password='l0lz')  # <3>
+    ssh.connect('localhost', username='python', password='l0lz', key_filename='/path/to/openssh-private-key-file')  # <3>
 
     stdin, stdout, stderr = ssh.exec_command('whoami')  # <4>
     print(stdout.read().decode())  # <5>

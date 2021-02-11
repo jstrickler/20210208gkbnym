@@ -23,3 +23,6 @@ num_recs = c.execute('''
 
 for row in row_as_dict(c):
     print(row['firstname'], row['lastname'])
+
+c.execute("select sqlite_version()")
+print(c.fetchone())

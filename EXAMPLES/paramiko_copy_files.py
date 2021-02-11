@@ -30,8 +30,8 @@ with paramiko.SSHClient() as ssh:  # <9>
     print(stdout.read().decode())
     print('-' * 60)
 
-    stdin, stdout, stderr = ssh.exec_command('rm -f {}/betsy.txt'.format(REMOTE_DIR))
-    stdin, stdout, stderr = ssh.exec_command('rmdir {}'.format(REMOTE_DIR))
+    # stdin, stdout, stderr = ssh.exec_command('rm -f {}/betsy.txt'.format(REMOTE_DIR))
+    # stdin, stdout, stderr = ssh.exec_command('rmdir {}'.format(REMOTE_DIR))
     stdin, stdout, stderr = ssh.exec_command('ls -l')
     print(stdout.read().decode())
     print('-' * 60)

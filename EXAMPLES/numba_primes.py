@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-
 import numba
 
 @numba.jit() # <1>

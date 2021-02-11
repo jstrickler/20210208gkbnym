@@ -20,7 +20,7 @@ class StandardDialogsMain(QMainWindow):
         self.ui.btFile.clicked.connect(self._choose_file)  # <1>
         self.ui.btColor.clicked.connect(self._choose_color)
         self.ui.btMessage.clicked.connect(self._show_error)
-            self.ui.btInput.clicked.connect(self._get_input)
+        self.ui.btInput.clicked.connect(self._get_input)
            # self.ui.BUTTON_NAME.clicked.connect(self._pushed)
 
     def _choose_file(self):
@@ -55,4 +55,4 @@ if __name__ == '__main__':
     main = StandardDialogsMain()
     main.show()
     sys.exit(app.exec_())
-+
+

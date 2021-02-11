@@ -22,7 +22,7 @@ email_handler = logging.handlers.SMTPHandler(
     ('jstrickpython', 'python(monty)'),
 )  # <7>
 
-logger.addHandler(email_handler)  # <8>
+# logger.addHandler(email_handler)  # <8>
 
 logger.debug('this is debug')  # <9>
 logger.critical('this is critical')  # <9>

@@ -6,7 +6,8 @@ conn = pymssql.connect(
     host="host",
     db="database",
     user="username",
-    passwd="l0lz"
+    passwd="l0lz",
+    port=1234,
 )
 
 cursor = conn.cursor()
@@ -18,6 +19,8 @@ row_count = cursor.execute('''
 ''')
 
 print("{} rows in result set\n".format(row_count))
+
+
 
 for row in cursor.fetchall():
     print(' '.join(row))

@@ -14,6 +14,8 @@ def main(args):
     response = requests.get(
         BASE_URL + args[0],
         params={'key': API_KEY},
+        # verify=True,
+        # cert='/path/to/cert/file/...',
     )  # <3>
 
     if response.status_code == requests.codes.OK:

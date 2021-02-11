@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-
 import sys
 from subprocess import check_output, Popen, CalledProcessError, STDOUT, PIPE # <1>
 from glob import glob

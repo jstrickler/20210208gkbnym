@@ -14,5 +14,12 @@ with sqlite3.connect("../DATA/presidents.db") as s3conn:  # <1>
 
     print("Sqlite3 does not provide a row count\n")  # <4>
 
+    first_row = s3cursor.fetchone()
+    next_six = s3cursor.fetchmany(6)
+
     for row in s3cursor.fetchall():  # <5>
-        print(' '.join(row))  # <6>
+        print(row)  # <6>
+
+    print("FIRST ROW:", first_row)
+    print()
+    print("Next 6:", next_six)
